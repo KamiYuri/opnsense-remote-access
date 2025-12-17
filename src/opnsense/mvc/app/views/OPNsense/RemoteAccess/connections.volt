@@ -83,10 +83,10 @@ $( document ).ready(function() {
                     var height = Math.floor(screen.height * 0.8);
                     var left = Math.floor((screen.width - width) / 2);
                     var top = Math.floor((screen.height - height) / 2);
-                    
+                    var token = "B8B21F54562A85E6E4ABB5F5E926F5B2003095704A2F9A6524F54B10A1B99C27"; // Placeholder token
                     var popup = window.open(
-                        "http://127.0.0.1:8080/guacamole/#/client/MQBjAHBvc3RncmVzcWw",
-                        'remoteaccess_' + uuid,
+                        'http://' + window.location.hostname + ":9443/guacamole/#/client/MQBjAHBvc3RncmVzcWw?token=" + token,
+                        'Remote Access - ' + connectionName,
                         'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top + 
                         ',resizable=yes,scrollbars=no,toolbar=no,menubar=no,location=no,status=no'
                     );
